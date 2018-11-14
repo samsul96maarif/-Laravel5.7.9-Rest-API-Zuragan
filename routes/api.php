@@ -21,6 +21,9 @@ Route::group([
     'prefix' => 'auth'
 ], function () {
     Route::post('login', 'AuthController@login');
+    Route::get('login', function () {
+      return view('login');
+    });
     Route::post('signup', 'AuthController@signup');
 
     Route::group([
