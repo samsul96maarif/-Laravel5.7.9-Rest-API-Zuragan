@@ -140,7 +140,7 @@ public function store(Request $request){
         public function delete($id)
         {
           $subscription = subscription::find($id);
-          
+
           if($subscription->delete()){
               $res['message'] = "Success!";
               $res['value'] = "$subscription";
