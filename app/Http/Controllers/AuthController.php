@@ -53,6 +53,7 @@ class AuthController extends Controller
             'password' => 'required|string',
             'remember_me' => 'boolean'
         ]);
+        // dd($request->username);
         $credentials = request(['username', 'password']);
         if(!Auth::attempt($credentials))
             return response()->json([
